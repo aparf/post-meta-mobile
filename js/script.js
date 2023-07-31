@@ -40,7 +40,6 @@ window.addEventListener("resize", calculateLeftWidth);
 // Make the DIV element draggable:
 dragElement(document.getElementById("mydiv"));
 
-// import Snap from ".svg-min.js"s
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
