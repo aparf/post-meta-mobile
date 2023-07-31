@@ -1,0 +1,169 @@
+@import url(reset.css);
+
+html{
+  font-size:0;
+}
+body{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+/* top layer */
+.overlayer{
+  /*pointer-events:none;*/
+  height: 100%;
+  width: 100%;
+  background-color: rgba(236, 236, 236, 0.97);
+
+  z-index: 2;
+  position: fixed;
+  display: flex;
+  justify-content: safe center;
+  align-items: center;
+
+  /*background:radial-gradient(circle at 50% 70%,transparent 29%,п 30%);*/
+}
+
+
+
+#windowPath{
+/*  animation: animationPathFinal 0.5s cubic-bezier(0.12, 0, 0.39, 0) 0s 1 forwards;
+  animation-delay: 0.5s;*/
+}
+
+@keyframes animationPathFinal{
+   0%{
+
+      d: path("M575 0H0V1117H575V0ZM287.5 453C254.087 453 227 480.087 227 513.5V553.5C227 586.913 254.087 614 287.5 614C320.913 614 348 586.913 348 553.5V513.5C348 480.087 320.913 453 287.5 453Z");
+  }
+
+  100%{
+
+    d: path("M575 0H0V1117H575V0ZM288 224C145.511 224 30 339.511 30 482V653C30 795.489 145.511 911 288 911C430.489 911 546 795.489 546 653V482C546 339.511 430.489 224 288 224Z");
+
+  }
+
+}
+
+path{
+  pointer-events: fill;
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: safe center;
+  align-items: center;
+  position: absolute;
+  z-index: 5;
+  pointer-events: none;
+
+}
+
+
+.window-container{
+  /*position: fixed;*/
+  z-index: 5;
+  /*pointer-events: stroke;*/
+  stroke: 2px;
+  width: 187px;
+  height: 164px;
+/*  width: 600px;
+  height: 600px;*/
+  /*background-color: white;*/
+  border-radius: 333px;
+  box-shadow: 0 0 0 9999px rgba(236, 236, 236, 0.97);
+
+
+
+}
+
+.limited-area{
+  position: absolute;
+  z-index: 200;
+
+  background-color: red;
+  pointer-events: auto;
+}
+
+
+.horizontal{
+  position:absolute;
+  background-color: rgba(236, 236, 236, 0.97);
+  width: calc(100vw - calc(100vw - 290px));
+  height: calc(calc(100vh - 188px)/2);
+  pointer-events: auto;
+
+}
+.top{
+  top: 0;
+}
+
+.bottom{
+  bottom: 0;
+}
+.vertical{
+  position: absolute;
+  background-color: rgba(236, 236, 236, 0.97);
+  height: 100vh;
+  width: calc(calc(100vw - 575px)/2);
+  pointer-events: auto;
+}
+
+.left{
+  left: 0;
+}
+
+.right{
+  right: 0;
+}
+
+
+/* bottom layer */
+.image-container{
+  overflow: scroll;
+  position: relative;
+
+/*  height: 100%;
+  width: 100%;*/
+
+  height: 800px;
+  width: 640px ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#mydiv {
+  position: absolute;
+  transform:scale(0.8);
+  transition: transform 0.4s ease-in
+}
+
+.image{
+  background-image: url("../t-shirt.jpg");
+  background-size: contain;
+  position: relative;
+  /*z-index: 20;*/
+  width: 640px;
+  height: 800px;
+
+/*  background-color: black;*/
+}
+
+#image{
+/*  transform:scale(0.8);*/
+  transition: 0.4s ease-in
+}
+.image-container:hover{
+  cursor: pointer;
+}
+
+
+
+
